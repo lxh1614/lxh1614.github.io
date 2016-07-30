@@ -1,0 +1,24 @@
+[ 2016-07-24T08:45:03+08:00 ] 127.0.0.1 /article_thinkphp/index.php/Home/Index/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001190s ]
+NOTIC: [2] Missing argument 1 for Think\Controller::show(), called in F:\workspace\webroot\test\article_thinkphp\Home\Controller\IndexController.class.php on line 12 and defined F:\workspace\webroot\test\ThinkPHP\Library\Think\Controller.class.php 第 68 行.
+NOTIC: [8] Undefined variable: content F:\workspace\webroot\test\ThinkPHP\Library\Think\Controller.class.php 第 69 行.
+ERR: 模板不存在:F:/workspace/webroot/test/article_thinkphp/Home/View/Index/index.html
+
+[ 2016-07-24T08:46:32+08:00 ] 127.0.0.1 /article_thinkphp/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000740s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001249s ]
+SQL: SHOW COLUMNS FROM `at_type` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `at_type`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001007s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001138s ]
+
