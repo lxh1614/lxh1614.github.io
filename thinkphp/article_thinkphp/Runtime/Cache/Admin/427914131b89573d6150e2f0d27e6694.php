@@ -46,7 +46,7 @@
                 <td><?php echo ($vo["id"]); ?></td>
                 <td><a href="#"><?php echo ($vo["typename"]); ?></a></td>
                 <td><a href="/article_thinkphp/index.php/Admin/Type/update/id/<?php echo ($vo["id"]); ?>/typename/<?php echo ($vo["typename"]); ?>">修改</a></td>
-                <td><a href="javascript:;" onclick="return confirm('你确定要删除吗？')">删除</a></td>
+                <td><a href="/article_thinkphp/index.php/Admin/Type/delete/id/<?php echo ($vo["id"]); ?>/typename/<?php echo ($vo["typename"]); ?>" onclick="return confirm('你确定要删除吗？')">删除</a></td>
             </tr><?php endforeach; endif; else: echo "暂时没有数据" ;endif; ?>
         <tr>
             <td colspan="20" style="text-align: center;">

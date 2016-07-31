@@ -47,7 +47,7 @@
                 <td>{$vo.id}</td>
                 <td><a href="#">{$vo.typename}</a></td>
                 <td><a href="__CONTROLLER__/update/id/{$vo.id}/typename/{$vo.typename}">修改</a></td>
-                <td><a href="javascript:;" onclick="return confirm('你确定要删除吗？')">删除</a></td>
+                <td><a href="__CONTROLLER__/delete/id/{$vo.id}/typename/{$vo.typename}" onclick="return confirm('你确定要删除吗？')">删除</a></td>
             </tr>
         </volist>
         <tr>

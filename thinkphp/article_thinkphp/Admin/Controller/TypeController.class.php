@@ -3,7 +3,7 @@ namespace Admin\Controller;
 
 use Think\Controller;
 
-class TypeController extends Controller
+class TypeController extends BaseController
 {
 
     public function showlist()
@@ -13,7 +13,7 @@ class TypeController extends Controller
         // $this->assign('res',$result);//set data to res then use volist to set page
 
         $count = $typename->count();
-        $page = new \Think\Page($count, 2);
+        $page = new \Think\Page($count, 5);
         $page->setConfig('prev', '上一页');
         $page->setConfig('next', '下一页');
 
@@ -53,9 +53,9 @@ class TypeController extends Controller
             $type = D('type');//get instance a table object
             if ($type->create($data)) {
                 if ($type->save()) {
-                    $this->success('add catcage success', U('showlist'), 2);//U :go to this method
+                    $this->success('update success', U('showlist'), 2);//U :go to this method
                 } else {
-                    $this->error('add catcage fail');//go to this current page auto
+                    $this->error('udpate fail');//go to this current page auto
                 }
             } else {
                 $this->error($type->getError());
@@ -68,5 +68,17 @@ class TypeController extends Controller
         $this->assign('typename',$typename);
         $this->assign('typeid',$typeid);
         $this->display();
+    }
+
+    public function delete()
+    {
+       $id=  I('id');
+       $type = D('type');
+        if($type->delete($id)){
+             $this->success('delete success', U('showlist'), 2);//U :go to this method
+        } else {
+            $this->error('delete fail');//go to this current page auto
+        }
+        
     }
 }
