@@ -16,6 +16,8 @@ class BaseController extends Controller
 			$this->error('please login first ',U('Login/login'));
 		}else{
 			$this->assign('admin',session('admin'));
+			$this->assign('admin',session('admin')['id']);
+
 		}
 	}
 }
